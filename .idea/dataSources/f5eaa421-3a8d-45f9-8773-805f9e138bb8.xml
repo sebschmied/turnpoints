@@ -941,10 +941,18 @@
       <DataType>text|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="235" parent="229" name="PRIMARY">
+    <index id="235" parent="229" name="turnpoints_coordinates_uindex">
+      <ColNames>coordinates</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="236" parent="229" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="237" parent="229" name="turnpoints_coordinates_uindex">
+      <ColNames>coordinates</ColNames>
+      <UnderlyingIndexName>turnpoints_coordinates_uindex</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
