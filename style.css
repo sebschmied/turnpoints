@@ -1,0 +1,10 @@
+body {
+    font-family:sans-serif;
+}
+
+#worldmap {
+
+    width: 800px;
+    height:  800px;
+    background-color: #0dd200;
+}

@@ -7,8 +7,7 @@
     <title>Paragliding Turnpoints database</title>
     <meta name="description" content="Paragliding Turnpoints Database">
     <meta name="author" content="Sebastian Schmied">
-
-
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 
 </head>
@@ -17,8 +16,8 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript"></script>
 <script src="js/worldmap.js"></script>
+<script type="text/javascript">
 
-<div id ="googlemaps"></div>
 <?php
 $sql = new mysqli("localhost", "turnpoints", "dummy", "tpex");
 $query="SELECT id, name, X(coordinates) as lon, Y(coordinates) as lat FROM turnpoints";
@@ -26,7 +25,7 @@ $query2 = "SELECT name FROM turnpoints";
 $result = mysqli_query($sql, $query);
 while ($row = mysqli_fetch_assoc($result))
 {
-
+    
     echo "id: " .  $row['id'] . "<br />";
     echo "name: " .  $row['name'] . "<br />";
     echo "lon: " .   $row['lon']  . "<br />";
@@ -36,9 +35,10 @@ while ($row = mysqli_fetch_assoc($result))
 }
 ?>
 
-<script async="async" defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1CqtckRTi90FYDLfUjuUIydnPzoJzmiI&amp;callback=initMap"></script>
+</script>
 
 
-
+<div id="worldmap">GOOGLE!!!</div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1CqtckRTi90FYDLfUjuUIydnPzoJzmiI&amp;callback=initMap"></script>
 
 </body>
