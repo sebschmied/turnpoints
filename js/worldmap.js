@@ -2,7 +2,9 @@ function initMap() {
 
     var map = new google.maps.Map(document.getElementById('worldmap'), {
         zoom: 8,
-        center: {lat: 48.995555555556, lng: 8.4766666666667}
+        center: {lat: 48.995555555556, lng: 8.4766666666667},
+        mapTypeId: 'terrain'
+
     });
 
 
